@@ -81,9 +81,6 @@ img {
 /* hader */
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
-
   border-bottom: 1px solid #ececec;
 }
 
@@ -191,13 +188,16 @@ img {
 .hero {
   padding: 200px 0;
   max-width: 1600px;
-  max-height: 600px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
 
   background-color: var(--background-second);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/bg-image/team-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .titel-hero {
@@ -356,18 +356,13 @@ img {
   justify-content: center;
 }
 
-.social-item {
-  width: 44px;
-  height: 44px;
-}
-
 .team-link {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 100%;
-  height: 100%;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   color: var(--social-color);
 }
@@ -385,13 +380,8 @@ img {
 .team-link:hover,
 .team-link:focus {
   background-color: var(--accent-color);
-
+  color: var(--background-section-team);
   cursor: pointer;
-}
-
-.team-link:hover .social-icon,
-.team-link:focus .social-icon {
-  fill: var(--background-section-team);
 }
 
 /* Regular clients */
@@ -400,18 +390,13 @@ img {
   display: flex;
 }
 
-.client-item {
-  width: 170px;
-  height: 92px;
-}
-
 .client-link {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 100%;
-  height: 100%;
+  width: 170px;
+  height: 92px;
 
   color: var(--social-color);
   border: 1px solid var(--social-color);
@@ -432,8 +417,6 @@ img {
 .client-link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
-
-  cursor: pointer;
 }
 
 /* Footer */
@@ -445,6 +428,7 @@ img {
 
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer .logo {
@@ -491,7 +475,7 @@ img {
 }
 
 .footer-social > p {
-  margin: 12px 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 .strong {
@@ -512,8 +496,8 @@ img {
   justify-content: center;
   align-items: center;
 
-  width: 100%;
-  height: 100%;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   color: var(--button-color);
   background-color: var(--bgc-footer-link);
@@ -578,8 +562,12 @@ img {
   background-color: var(--background-foto);
 }
 
-.work:hover,
-.work:focus {
+.work-link {
+  display: block;
+}
+
+.work-link:hover,
+.work-link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
